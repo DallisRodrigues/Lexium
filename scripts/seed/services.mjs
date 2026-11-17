@@ -22,6 +22,7 @@ export const services = [
         'Lexium helps leadership teams translate market ambition into a focused portfolio, operating agenda and executable plan. We work alongside promoters, CEOs and boards to test where value will come from, what it will take to capture it, and which decisions need to be made first.',
       introMobile: 'Lexium helps leadership teams translate market ambition into a focused portfolio, operating agenda and executable plan.',
       variant: 'split',
+      image: img('/images/strategy-team-workshop', 'Executive looking out over a city from a high-rise office window', { x: 60, y: 50 }),
     },
     clientQuestions: ['Where should we play?', 'How will we win?', 'What must change to deliver the ambition?'],
     tensionsHeading: 'Growth choices are getting harder to make — and more expensive to get wrong.',

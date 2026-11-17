@@ -5,6 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
+// Canonical origin for SEO tags: explicit VITE_SITE_URL, else SITE_URL, else Render's public URL.
+process.env.VITE_SITE_URL ||= process.env.SITE_URL || process.env.RENDER_EXTERNAL_URL || '';
 const cert = (f) => path.join(root, 'certs', f);
 const https = fs.existsSync(cert('localhost.pem'))
   ? { key: fs.readFileSync(cert('localhost-key.pem')), cert: fs.readFileSync(cert('localhost.pem')) }

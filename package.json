@@ -19,7 +19,8 @@
     "lighthouse": "lhci autorun --config=lighthouserc.cjs",
     "backup": "bash scripts/backup.sh",
     "audit": "npm audit --omit=dev",
-    "review-report": "node --env-file=.env scripts/review-report.mjs"
+    "review-report": "node --env-file=.env scripts/review-report.mjs",
+    "build:render": "node scripts/seed-if-empty.mjs && npm -w client run build && (npx playwright install chromium && node scripts/prerender.mjs || echo \"[render] prerender skipped \u2014 serving SPA shell\")"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

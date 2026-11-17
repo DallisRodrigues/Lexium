@@ -1,1 +1,241 @@
-{}
+{
+  "/images/boardroom-table-minimal": {
+    "widths": [
+      480,
+      768,
+      1200
+    ],
+    "width": 1280,
+    "height": 960,
+    "mobileSrc": "/images/boardroom-table-minimal-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoUAA8APu1iqk4ppaQiMAgBMB2JYwCdMoAC7vxT/XVDZWAA/JzD6DcHs2dXK6nbrCwWe4Uq4tcmYJ5dWMRTSpozSgLmLCN2nZPDhpVPUxAEUQBltTmWaRoAAAA="
+  },
+  "/images/clean-laboratory-documents-inspection": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 799,
+    "mobileSrc": "/images/clean-laboratory-documents-inspection-mobile",
+    "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoUAAoAPu1kqU4ppaOiMAgBMB2JZwDE2BjOm8kM7hCt9FAA9pe6iEXqE+31Qhpgp6NPHo6EX2vorY1R5g7DOc7txNhi8LQMYgAAAA=="
+  },
+  "/images/cleanroom-manufacturing": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 900,
+    "mobileSrc": "/images/cleanroom-manufacturing-mobile",
+    "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoUAAsAPu1kqk4ppaQiMAgBMB2JZQDG9B3h3laWzSm4sAD8yP7lxv/3QPRzLSlLDDrn6f85/iz5l2N7udbN8/0jyNuAAA=="
+  },
+  "/images/container-port-aerial": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067,
+    "mobileSrc": "/images/container-port-aerial-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAwCdASoUAA0APu1mq04ppaQiMAgBMB2JZQCo9B4zZJbjcYWzAAD+R+EJSDBdfGDjh7PzO4GkTm5RLwl+tzV2C3SyBwklgKoOE0l2UrGEfXqVAAA="
+  },
+  "/images/digital-health-clinician-tablet": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067,
+    "mobileSrc": "/images/digital-health-clinician-tablet-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoUAA0APu1kqU2ppaOiMAgBMB2JYwC06BucjZM8vpRoAP7wKPHIaFZzHqoOEzuYX9j17JlXiRuMRxRdxnv3tqi8v8/94pjVR3MSgeSAAAA="
+  },
+  "/images/financial-charts-screen-minimal": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 850,
+    "mobileSrc": "/images/financial-charts-screen-minimal-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUAAsAPu1krU6ppaSiMAgBMB2JZQC7ABufZwXJoA1gf/9QQAD+6PFkTyUlqTpQB14TYC9QYy5Q3RLVgERLxQO7qELvVO3nUC3emWJa2qVxl4agAAA="
+  },
+  "/images/functional-beverage-lab-glass": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067,
+    "mobileSrc": "/images/functional-beverage-lab-glass-mobile",
+    "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoUAA0APu1mqk4ppaOiMAgBMB2JZQC+SCHeoIvyWI1wvEjwAP7vyvpm5bBQcU4qdfQ8EtWVPEs7LM/ucG+viDtX7kKQAA=="
+  },
+  "/images/home-minimal-architecture-daylight": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200,
+    "mobileSrc": "/images/home-minimal-architecture-daylight-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoUAA8APu1kqk4ppaQiMAgBMB2JYwCdACFPQDv5z/QugXgA/sT1SRFg227RX9gv9+YpHXHsVB1DvIrhn+PoCoxHGxNpK4o6/DVGqMEwuyl/kqnAAAA="
+  },
+  "/images/india-business-district-daylight": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067,
+    "mobileSrc": "/images/india-business-district-daylight-mobile",
+    "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABwAwCdASoUAA0APu1qrU8ppiQiMAgBMB2JaQAAW+f2uo0ZtOAA/cjDxldOe+GygtuScLiw8gAAAA=="
+  },
+  "/images/insight-capital-readiness": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1339,
+    "mobileSrc": "/images/insight-capital-readiness-mobile",
+    "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwBACdASoUABEAPu1kpk4ppaMiMBgMATAdiWcAx+QMZGYNMCNyyA0/UAyU2P6AAP7x4GY8eul5oPJ6/SMWZaehJnz5kr6/2R3dKxhMYXyVbtYxD1CCUQkkbrk+jaSca5bg7MAA"
+  },
+  "/images/insight-device-localisation-regulatory": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1063,
+    "mobileSrc": "/images/insight-device-localisation-regulatory-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoUAA0APu1iqk2ppaQiMAgBMB2JZQDImBotAKE5uFIF5YscAAD97NOTXN0vA5Uhz2uFe3rvmTJb4nQwf8Ci3imThThvZGpQYTTx6Wj2A8glkSX6jz/IsQAA"
+  },
+  "/images/insight-global-south-manufacturing": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200,
+    "mobileSrc": "/images/insight-global-south-manufacturing-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdABZdqeFZjAdaO4AA8n6LhZt5yiylhcKHAtusrOjZU/uzmCf8Kocc/ACKk92cpssd/4iJpx4w3TqjAAAA"
+  },
+  "/images/insight-india-market-platform": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1066,
+    "mobileSrc": "/images/insight-india-market-platform-mobile",
+    "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYgCdMoACXcRH3CM5w4agAP6eH//dwZ5HDxdMeApsA8d3UaywhZmnNHx8R26KT2jaclOD0qnQAA=="
+  },
+  "/images/insight-ma-partnerships": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200,
+    "mobileSrc": "/images/insight-ma-partnerships-mobile",
+    "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JaACdMoR3ACEO7ZY5/bBUgDAA/sBjPwWJ2j0+jJ1IoEQ+P2v8ScFQ4HQEx7LFdtncUIK60zmmT8QoERZBouNO9PSUbBQXo+dnOgAA"
+  },
+  "/images/insight-regulated-consumer-brands": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1068,
+    "mobileSrc": "/images/insight-regulated-consumer-brands-mobile",
+    "placeholder": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoUAA0APu1iqk4ppaQiMAgBMB2JZQAAUaI+seFp4ADiPSgS4JVq50IB8w5IH8Ca+nN1bkTc+AA="
+  },
+  "/images/medical-device-diagnostic-manufacturing": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200,
+    "mobileSrc": "/images/medical-device-diagnostic-manufacturing-mobile",
+    "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JZQC0+f/gO63XUkOnhwmAAPz74UM5dNJW82DDC+Zp21PV8jHnR+L6DzL+TRDg9Gc4bLvD8+3SXDLJvugmGM3mE9vogmL5ugekFu7oAAA="
+  },
+  "/images/modern-office-atrium-white": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1372,
+    "mobileSrc": "/images/modern-office-atrium-white-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoUABEAPu1oqk8ppiOiMBgIATAdiWUAgnADN90mRbkkwOtrlmAA/jp6cdKtC+L8befSBfXtOs4h+fh9ufpG6QVJ8YNaj8rVJiMIQ4bUabKdhdulIdugAAAA"
+  },
+  "/images/strategy-team-workshop": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200,
+    "mobileSrc": "/images/strategy-team-workshop-mobile",
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoUAA8APu1kqk4ppaQiMAgBMB2JZwDE2CPyHcfmtGI/2rYAAP7qsIoydwEGaTfxeUrwHXIau0HLjSsxNpUdcXKkZpM4oAAA"
+  },
+  "/images/unbranded-skincare-formulation-lab": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1068,
+    "mobileSrc": "/images/unbranded-skincare-formulation-lab-mobile",
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoUAA0APu1kqU2ppaQiMAgBMB2JZwAAMVMKOPgQWeAuAAD+0d3UAJ2jo3Zq2ZDhh67IegpD9H5cFQH7980tTHI8UOpM/AO6GT4Q0i8854ZITP426Xo8AA=="
+  },
+  "/images/wellness-products-smartwatch": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067,
+    "mobileSrc": "/images/wellness-products-smartwatch-mobile",
+    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdLoAAQSpvbhetBNxYwAAA/o026V5JJ6eWhGTwlDtSYGltaCMsYHn4b5E5fCPy+7vTjzh9mvbbdasR5Ae+xdnRyOr/jA8+68+pajKhjP0sF+wNQAAA"
+  }
+}

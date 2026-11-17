@@ -22,14 +22,14 @@ export async function publicRoutes() {
 }
 
 r.get('/sitemap.xml', async (_req, res) => {
-  const stream = new SitemapStream({ hostname: process.env.SITE_URL || 'https://lexium.local:8443' });
+  const stream = new SitemapStream({ hostname: process.env.SITE_URL || process.env.RENDER_EXTERNAL_URL || 'https://lexium.local:8443' });
   (await publicRoutes()).forEach((u) => stream.write(u));
   stream.end();
   res.type('application/xml').send(await streamToPromise(stream));
 });
 
 r.get('/robots.txt', (_req, res) => {
-  res.type('text/plain').send(`User-agent: *\nDisallow: /admin\nDisallow: /api/admin\n\nSitemap: ${process.env.SITE_URL || 'https://lexium.local:8443'}/sitemap.xml\n`);
+  res.type('text/plain').send(`User-agent: *\nDisallow: /admin\nDisallow: /api/admin\n\nSitemap: ${process.env.SITE_URL || process.env.RENDER_EXTERNAL_URL || 'https://lexium.local:8443'}/sitemap.xml\n`);
 });
 
 r.get('/api/routes', async (_req, res) => res.json((await publicRoutes()).map((u) => u.url)));

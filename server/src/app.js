@@ -18,7 +18,8 @@ const DIST = path.resolve(import.meta.dirname, '../../client/dist');
 export function createApp({ serveClient = process.env.NODE_ENV === 'production' } = {}) {
   const app = express();
   app.disable('x-powered-by');
-  app.set('trust proxy', 'loopback');
+  // Behind a hosting proxy (Render) trust one hop so req.ip / rate limits see the real client.
+  app.set('trust proxy', process.env.TRUST_PROXY ? Number(process.env.TRUST_PROXY) || process.env.TRUST_PROXY : 'loopback');
 
   app.use(
     helmet({

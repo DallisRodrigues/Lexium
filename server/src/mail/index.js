@@ -5,8 +5,10 @@ export function mailer() {
   transport ??= nodemailer.createTransport({
     host: process.env.SMTP_HOST || '127.0.0.1',
     port: Number(process.env.SMTP_PORT || 1025),
-    secure: false,
-    ignoreTLS: true,
+    // Local Mailpit: plain, no auth. Real SMTP (Render): set SMTP_USER/SMTP_PASS; port 465 => implicit TLS.
+    secure: Number(process.env.SMTP_PORT) === 465,
+    ignoreTLS: !process.env.SMTP_USER,
+    ...(process.env.SMTP_USER ? { auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } } : {}),
   });
   return transport;
 }

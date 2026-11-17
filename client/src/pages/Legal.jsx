@@ -4,6 +4,7 @@ import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import Disclaimer from '../components/Disclaimer.jsx';
 import PageState from '../templates/PageState.jsx';
+import credits from '../content/image-credits.json';
 
 export default function Legal({ pageKey }) {
   const page = useQuery(q.page(pageKey));
@@ -25,6 +26,21 @@ export default function Legal({ pageKey }) {
                     {String(s.intro || '').split(/\n{2,}/).map((t) => <p key={t}>{t}</p>)}
                   </section>
                 ))}
+                {pageKey === 'terms' && credits.length > 0 && (
+                  <section aria-labelledby="image-credits-h">
+                    <h2 id="image-credits-h">Image credits</h2>
+                    <p>Photography used on this site is reproduced under the licences listed below.</p>
+                    <ul>
+                      {credits.map((c) => (
+                        <li key={c.file}>
+                          <a href={c.pageUrl} rel="noopener noreferrer">{c.title || c.file}</a>
+                          {c.photographer ? ` by ${c.photographer}` : ''}, {c.source},{' '}
+                          {c.licenseUrl ? <a href={c.licenseUrl} rel="noopener noreferrer license">{c.license.trim()}</a> : c.license}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
               </div>
             </article>
           </>

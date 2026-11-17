@@ -1,0 +1,53 @@
+# Render Blueprint — Lexium Consulting (Express API + React client, one web service)
+# Docs: https://render.com/docs/blueprint-spec
+#
+# The only value you must enter is MONGODB_URI (MongoDB Atlas; allow 0.0.0.0/0 under Network Access).
+# On the first deploy the build seeds the empty database automatically (scripts/seed-if-empty.mjs);
+# later deploys never touch existing content.
+#
+# Optional, add later in the dashboard (Environment tab) — the site works without them:
+#   SITE_URL          custom domain, e.g. https://lexiumconsulting.com (defaults to the onrender.com URL)
+#   SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_FROM   enquiry e-mails (forms still save to the DB without them)
+#   LEAD_GENERAL, LEAD_REGULATORY, LEAD_MANUFACTURING, LEAD_MARKET_ENTRY, LEAD_MA, LEAD_CAPITAL   lead routing addresses
+
+services:
+  - type: web
+    name: lexium
+    runtime: node
+    # Free plan: sleeps after 15 min idle (first visit then takes ~1 min) and admin image uploads are lost
+    # on redeploy. For production switch to `plan: starter` and uncomment the `disk` block below.
+    plan: free
+    branch: main
+    autoDeploy: true
+    buildCommand: npm ci --include=dev && npm run build:render
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "1"
+      # Seeded copy is in "review" status awaiting Lexium approval; true shows it on the live site.
+      # Set to false once content has been approved in the admin.
+      - key: CONTENT_PREVIEW
+        value: "true"
+
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+
+      # Admin login for /admin — password is generated; read it under Environment in the Render dashboard.
+      - key: ADMIN_NAME
+        value: Lexium Admin
+      - key: ADMIN_EMAIL
+        value: admin@lexiumconsulting.com
+      - key: ADMIN_PASSWORD
+        generateValue: true
+
+    # disk:
+    #   name: lexium-uploads
+    #   mountPath: /opt/render/project/src/server/uploads
+    #   sizeGB: 1

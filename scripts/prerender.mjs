@@ -12,13 +12,14 @@ import { chromium } from '@playwright/test';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'client/dist');
 const PORT = 8499;
-const BASE = `https://127.0.0.1:${PORT}`;
+const HTTPS = await fs.access(path.join(ROOT, 'certs/localhost.pem')).then(() => !process.env.RENDER, () => false);
+const BASE = `${HTTPS ? 'https' : 'http'}://127.0.0.1:${PORT}`;
 
 await fs.copyFile(path.join(DIST, 'index.html'), path.join(DIST, '_shell.html'));
 
-const server = spawn(process.execPath, ['--env-file=.env', 'server/src/index.js'], {
+const server = spawn(process.execPath, ['--env-file-if-exists=.env', 'server/src/index.js'], {
   cwd: ROOT,
-  env: { ...process.env, NODE_ENV: 'production', HTTPS_PORT: String(PORT) },
+  env: { ...process.env, NODE_ENV: 'production', HTTPS_PORT: String(PORT), ...(HTTPS ? {} : { PORT: String(PORT) }) },
   stdio: ['ignore', 'pipe', 'inherit'],
 });
 await new Promise((resolve, reject) => {
