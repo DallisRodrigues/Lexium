@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const b = await chromium.launch(); const p = await b.newPage({ ignoreHTTPSErrors: true });
+p.on('request', (r) => r.url().includes('/api/events') && console.log('REQ', r.method(), r.postData()));
+p.on('console', (m) => console.log('console', m.text().slice(0, 120)));
+await p.goto('https://127.0.0.1:8443/');
+await p.getByRole('button', { name: 'Accept' }).click();
+console.log('consent', await p.evaluate(() => localStorage.getItem('lx-consent-v1')));
+await p.goto('https://127.0.0.1:8443/contact/');
+await p.locator('#f-name').fill('x');
+await p.waitForTimeout(3000);
+await b.close();

@@ -1,0 +1,34 @@
+{
+  "name": "lexium",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm -w server run dev\" \"npm -w client run dev\"",
+    "build": "npm -w client run build && node scripts/prerender.mjs",
+    "start": "NODE_ENV=production npm -w server run start",
+    "seed": "node --env-file=.env scripts/seed.mjs",
+    "images": "bash scripts/fetch-images.sh && node scripts/optimise-images.mjs",
+    "test": "npm -w server run test && npm -w client run test",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test tests/a11y.spec.js",
+    "verify:copy": "node scripts/verify-copy.mjs",
+    "lighthouse": "lhci autorun --config=lighthouserc.cjs",
+    "backup": "bash scripts/backup.sh",
+    "audit": "npm audit --omit=dev",
+    "review-report": "node --env-file=.env scripts/review-report.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@lhci/cli": "^0.16.1",
+    "@playwright/test": "^1.65.1",
+    "concurrently": "^10.0.7"
+  },
+  "allowScripts": {
+    "argon2@0.45.2": true,
+    "mongodb-memory-server@11.3.0": true
+  }
+}

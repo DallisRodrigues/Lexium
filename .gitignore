@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+certs/
+backups/
+client/public/images/raw/
+test-results/
+playwright-report/
+.lighthouseci/
+screenshots/
+screenshots/
